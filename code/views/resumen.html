@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <title>Go Gambler Go</title>
+</head>
+<body onload="onloadRes()">
+<div class="container-fluid" style="background: url(src/fondo.jpg) no-repeat; width: 100%; height: 100vh; background-position: center;">
+    <div class="row justify-content-center" style="--bs-gutter-x: 0;">
+        <h1 class="titulo">GoGamblerGo</h1>
+    <div class="col-11 fondoRes" style="margin-top: 12vh; margin-bottom: 8vh;">
+        <div>
+        <div class="row justify-content-between m-3 mb-5">
+            <div class="col-6">
+                <div class="row justify-content-center">
+                    <div class="col-auto p-0">
+                        <p class="resText">Selected participant: </p>
+                    </div>
+                    <div class="col-auto">
+                        <p class="resCont" id="sujetoSelec"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row justify-content-center">
+                    <div class="col-auto p-0">
+                        <p class="resText">Selected settings: </p>
+                    </div>
+                    <div class="col-auto">
+                        <p class="resCont" id="configSelec"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+        <div class="col-6">
+            <div class="row justify-content-center mb-3">
+                <div class="col-2 d-flex align-items-center">
+                    <p class="resText">Deck A: </p>
+                </div>
+                <div class="col-auto p-0">
+                    <p class="resText">Gain: </p>
+                    <p class="resText">Loss: </p>
+                </div>
+                <div class="col-auto">
+                    <p class="resCont" id="gananciaA">100,200,300,400,500,600,700,1000</p>
+                    <p class="resCont" id="perdidaA">100,200,300,400,500,600,700,1000</p>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-2 d-flex align-items-center">
+                    <p class="resText">Deck C: </p>
+                </div>
+                <div class="col-auto p-0">
+                    <p class="resText">Gain: </p>
+                    <p class="resText">Loss: </p>
+                </div>
+                <div class="col-auto">
+                    <p class="resCont" id="gananciaC">100,200,300,400,500,600,700,1000</p>
+                    <p class="resCont" id="perdidaC">100,200,300,400,500,600,700,1000</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row justify-content-center mb-3">
+                <div class="col-2 d-flex align-items-center">
+                    <p class="resText">Deck B: </p>
+                </div>
+                <div class="col-auto p-0">
+                    <p class="resText">Gain: </p>
+                    <p class="resText">Loss: </p>
+                </div>
+                <div class="col-auto">
+                    <p class="resCont" id="gananciaB">100,200,300,400,500,600,700,1000</p>
+                    <p class="resCont" id="perdidaB">100,200,300,400,500,600,700,1000</p>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-2 d-flex align-items-center">
+                    <p class="resText">Deck D: </p>
+                </div>
+                <div class="col-auto p-0">
+                    <p class="resText">Gain: </p>
+                    <p class="resText">Loss: </p>
+                </div>
+                <div class="col-auto">
+                    <p class="resCont" id="gananciaD">100,200,300,400,500,600,700,1000</p>
+                    <p class="resCont" id="perdidaD">100,200,300,400,500,600,700,1000</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto p-0">
+                <p class="resText">Finish mode: </p>
+            </div>
+            <div class="col-auto">
+                <p class="resCont" id="terminacion"></p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto p-0">
+                <p class="resText">Selections: </p>
+            </div>
+            <div class="col-auto">
+                <p class="resCont" id="selecciones"></p>
+            </div>
+            <div class="col-auto p-0">
+                <p class="resText">Time: </p>
+            </div>
+            <div class="col-auto">
+                <p class="resCont" id="tiempo"></p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto p-0">
+                <p class="resText">Starting bank: </p>
+            </div>
+            <div class="col-auto">
+                <p class="resCont" id="bancoIni"></p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <a href="pre.html">
+                <button class="btn btn-danger" type="button">Back</button>
+            </a>
+        </div>
+        <div class="col-auto">
+            <a href="instrucciones.html">
+                <button class="btn btn-primary" type="button">Start</button>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="../viewscripts/resumen.js"></script>
+</body>
+</html>

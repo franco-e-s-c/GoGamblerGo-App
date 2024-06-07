@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGG</title>
+  </head>
+  <body onload="onloadIGT()" style="background-color: #2D3264; overflow: hidden;">
+    <div id="over" class="over">
+        <a href="pre.html" onclick="reset()">
+            <h1 class="fin">GAME COMPLETED</h1>
+        </a>
+    </div>
+    <div id="pausa" class="overP oscurecerP" style="display: none;">
+        <p id="temp" class="titulo"></p>
+        <p class="titulo" id="mensj">Wait</p>
+        <h1 class="fin">PAUSE</h1>
+    </div>
+    <div class="bg" id="oscurecer"></div>
+    <h1 class="titulo">GoGamblerGo</h1>
+    <div class="score" id="score">
+        <h2 class="labelP letraP">Score: </h2>
+        <h2 class="labelP letraP" id="puntos">2000</h2>
+    </div>
+    <div class="fondo" id="fondo"></div>
+    <div class="fondo-mazo">
+        <div class="contenedor-mazo" onclick="crear2(this)" id="Am">
+            <div class="carta-mazo">
+                <div class="carta-lomo">
+                    <img src="src/doodad.jpg" alt="" class="dorso">
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-mazo" onclick="crear2(this)" id="Bm">
+            <div class="carta-mazo">
+                <div class="carta-lomo">
+                    <img src="src/doodad.jpg" alt="" class="dorso">
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-mazo" onclick="crear2(this)" id="Cm">
+            <div class="carta-mazo">
+                <div class="carta-lomo">
+                    <img src="src/doodad.jpg" alt="" class="dorso">
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-mazo" onclick="crear2(this)" id="Dm">
+            <div class="carta-mazo">
+                <div class="carta-lomo">
+                    <img src="src/doodad.jpg" alt="" class="dorso">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fondo-display" id="fondo-d">
+        <div class="flip-card" id="A">
+        </div>
+        <div class="flip-card" id="B">
+        </div>
+        <div class="flip-card" id="C">
+        </div>
+        <div class="flip-card" id="D">
+        </div>
+    </div>
+    <script src="../viewscripts/igt.js"></script>
+  </body>
+</html>

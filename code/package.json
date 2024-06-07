@@ -1,0 +1,70 @@
+{
+  "name": "go-gambler-go",
+  "version": "1.0.0",
+  "description": "GGG",
+  "main": "main.js",
+  "build": {
+    "appId": "GGG",
+    "extraResources": ["./python/**"]
+    
+  },
+  "config": {
+    "asar": true,
+    "forge": {
+      "packagerConfig": {
+        "asar": true, 
+        "extraResource": [
+          "./python",
+          "./experimentos"
+         ]
+       },
+       "makers":[{
+        "name": "@electron-forge/maker-squirrel",
+        "platforms":[
+          "win32"
+        ],
+        "config":{
+          "asar": true
+        }
+     }]
+     }
+   },
+  "scripts": {
+    "start":"electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "dist": "electron-builder",
+    "preinstall": "echo 'Installing Python Dependencies...' && pip install -r requirements.txt"
+  },
+  "author": "Franco Silva",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "^22.0.0"
+  },
+  "dependencies": {
+    "@getvim/execute": "^1.0.0",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "datatables": "^1.10.18",
+    "datatables.net-bs5": "^1.13.1",
+    "datatables.net-datetime": "^1.5.2",
+    "datatables.net-plugins": "^1.13.6",
+    "datatables.net-searchpanes-bs5": "^2.1.0",
+    "datatables.net-select-bs5": "^1.5.0",
+    "dotenv": "^16.0.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "jquery": "^3.7.1",
+    "moment": "^2.30.1",
+    "pg": "^8.8.0",
+    "python-shell": "^5.0.0",
+    "shuffle-seed": "^1.1.6"
+  }
+}

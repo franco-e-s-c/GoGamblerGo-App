@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="css/stylesB.css">
+    <title>Go Gambler Go</title>
+</head>
+<body style="background-color: #CECECE; margin: 0;" onload="onloadModi()">
+    <header class="header">
+        <div class="logo">
+            <h1>GGG</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li>
+                    <a href="settings.html">Game settings</a>
+                </li>
+                <li>
+                    <a href="sujetos copy.html">Participants</a>
+                </li>
+                <li>
+                    <a href="pre.html">Acquisition</a>
+                </li>
+                <li>
+                    <a href="analisis.html">Visualization</a>
+                </li>
+                <li>
+                    <a href="reportes.html">Reports</a>
+                </li>
+            </ul>
+        </nav>
+            <nav>
+            <ul class="nav-links">
+                <li class="nav-li2">
+                    <a href="perfil.html" style="vertical-align: middle;">Profile</a>
+                </li>
+                
+                <li class="nav-li2">
+                    <a href="perfil.html" style="vertical-align: middle;"><img src="src/account-circle.png" alt=""></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <header class="header" style="background-color: #9F9F9F;">
+        <nav>
+            <ul class="nav-links2">
+                <li>
+                    <a href="sujetos copy.html">Edit/Delete</a>
+                </li>
+                <li>
+                    <a href="registro.html">Register</a>
+                </li>
+            </ul>
+    </header>
+    <div class="formulario">
+        <div class="container" style="padding: 0 7em;">
+            <form class="needs-validation" id="config" novalidate onsubmit="return false">
+                <h1 class="subtitulo mb-3">Edit Participant</h1>
+                <div class="row justify-content-between mb-5">
+                    <div class="col-5">
+                        <label for="nameSetting" class="fprm-label">Name</label>
+                        <input type="text" class="form-control" id="nameSetting" placeholder="Juan" required>
+                    </div>
+                    <div class="col-5">
+                        <label for="apeSetting" class="fprm-label">Last name</label>
+                        <input type="text" class="form-control" id="apeSetting" placeholder="Sanchez" required>
+                    </div>
+                </div>
+                <div class="row justify-content-between mb-5">
+                    <div class="col-5">
+                        <label for="fechaSetting" class="fprm-label">Date of birth</label>
+                        <input type="date" class="form-control" id="fechaSetting" required>
+                    </div>
+                    <div class="col-5">
+                        <label for="escoSettings">Education level</label>
+                        <select class="form-select" aria-label="Escolaridad" id="escoSettings" onchange="loadSet(this)">
+                            <option value = "Elementary School">Elementary School</option>
+                            <option value = "Middle School">Middle School</option>
+                            <option value = "High School">High School</option>
+                            <option value = "Technical High School">Technical High School</option>
+                            <option value = "Bachelor Degree">Bachelor's Degree</option>
+                            <option value = "Master Degree">Master's Degree</option>
+                            <option value = "PhD">PhD</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-between mb-3">
+                    <div class="col-5">
+                        <label for="sexSettings">Sex</label>
+                        <select class="form-select" aria-label="Escolaridad" id="sexSettings" onchange="loadSet(this)">
+                            <option value = true>Man</option>
+                            <option value = false>Woman</option>
+                        </select>
+                    </div>
+                    <div class="col-5">
+                        <label for="telSetting" class="fprm-label">Phone number</label>
+                        <input type="text" class="form-control" id="telSetting" placeholder="3311756240" required>
+                    </div>
+                </div>
+                <div class="row justify-content-between mb-5">
+                </div>
+                <div id="liveAlertPlaceholder"></div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg" id="saveSet">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="trainingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trainingModalLabel">Participant changes saved correctly</h5>
+              <a href="sujetos copy.html">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="cerrarConf()" ></button>
+              </a>
+            </div>
+            <div class="modal-body" id="texto">
+            </div>
+            <div class="modal-footer">
+                <a href="sujetos copy.html">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="boton" onclick="cerrarConf()">Accept</button>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="../viewscripts/modificar.js"></script>
+</body>
+</html>

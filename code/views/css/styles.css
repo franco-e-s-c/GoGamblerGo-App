@@ -1,0 +1,619 @@
+/*html{
+    background-color: #2D3264;
+}*/
+/**{
+    user-select: none;
+}*/
+div.dtsp-title, div.dtsp-topRow {
+    display: none;
+    display: none;
+  }
+  div.dtsp-searchPane div.dataTables_scrollBody {
+    height: fit-content !important;
+  }
+.neuropan{
+    
+}
+
+a .link{
+    color: #D99729;
+}
+
+.tabla{
+    width: 80%;
+    border: 0.3em solid #2D3264;
+    background-color: #fff;
+    overflow-y: scroll;
+    position: relative;
+    max-height: 66vh;
+    height: 66vh;
+
+}
+
+.mazoLab{
+    font-weight: 700;
+    font-size: larger;
+}
+
+.fin{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 6vw;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-35%);
+    position: relative;
+    float: left;
+    font-weight: 900;
+    text-shadow: 4px 4px 8px #000000;
+    margin: 0;
+}
+
+.over{
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 10010;
+    pointer-events: all;
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.overP{
+    background-color: rgb(0, 0, 0);
+    z-index: 10010;
+    pointer-events: all;
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.bg{
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 999;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    visibility: hidden;
+    
+}
+.titulo{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #fff;
+    /*background-color: #2D3264;*/
+    font-size: 1.7vw;
+    
+}
+
+.labelW{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.subtitulo{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #2D3264;
+    font-weight: 900;
+    font-size: 1.5vw;
+}
+
+.form-control:disabled{
+    background-color: #9a9a9a;
+    opacity: 1;
+    font-weight: 700;
+}
+
+.range2{
+    background-color: #000000;
+}
+
+.fondo-display{
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    border-radius: 30px;
+    perspective: 1000px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.fondo-mazo{
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    border-radius: 30px;
+    perspective: 1000px;
+    text-align: center;
+}
+
+.fondo{
+    background-color: #464A71;
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    border-radius: 30px;
+    perspective: 1000px;
+    text-align: center;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.25);
+}
+
+.fondoRes{
+    background-color: rgba(0,0,0,0.25);
+    width: 90%;
+    height: 70%;
+    border: 0.3em solid #D99729;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.25);
+}
+
+.resText{
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.2vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.resCont{
+    color: #fff;
+    font-size: 1.2vw;
+    font-weight: 400 ;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carta-mazo{
+    background-color: #fff;
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    box-shadow: -20px 23px 19px -1px rgba(0,0,0,0.17);
+}
+
+.contenedor-mazo{
+    background-color: transparent;
+    width: 16.84%;
+    height: 58.84%;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    top: 50%;
+    transform: translate(0%, -50%);
+    padding: 1em;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0.3em;
+    border: 0.3em solid #D99729;
+    border-radius: 5%;
+}
+
+.flip-card-reposo{
+    background-color: transparent;
+    width: 291px;
+    height: 419px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    top: 50%;
+    transform: translate(0%, -50%);
+    padding: 1.3em;
+    margin: 0.3em;
+    position: relative;
+    display: none;
+    vertical-align: middle;
+    transition: display 0s, opacity 0.5s linear;
+}
+
+.flip-card{
+    background-color: transparent;
+    width: 16.84%;
+    height: 58.84%;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    top: 50%;
+    transform: translate(0%, -50%);
+    padding: 1.3em;
+    margin: 0.3em;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    transition: 0.8s;
+}
+
+.carta{
+    background-color: #fff;
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta-lomo, .carta-info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.carta-lomo{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carta-texto{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 0;
+}
+
+.carta-info li{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.carta-info ul{
+    padding: 0;
+}
+.carta-info{
+    background-color: #2E2E2E;
+    color: #fff;
+    transform: rotateY(180deg);
+    font-size: 2.5vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 84.53%;
+    height: 84.53%;
+}
+
+.dorso{
+    width: 84.53%;
+}
+
+.score{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+    text-align: center;
+    width: 10%;
+    height: 10%;
+    background-color: #D99729;
+    border-radius: 1em;
+    z-index: 1001;
+}
+
+.letraP{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.2vw;
+    
+
+}
+
+.labelP{
+    display: inline-block;
+}
+
+/*NavBar*/
+.nav{
+    width: 100%;
+    height: 17.77%;
+    background-color: #2D3264;
+    position: absolute;
+    margin: 0;
+}
+
+.header{
+    background-color: #2D3264;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 1% 7%;
+}
+
+.header *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+}
+
+.header .logo h1{
+    font-size: 4vw;
+    color: #fff;
+}
+
+.header .logo{
+    cursor: none;
+}
+
+.header .btn img{
+    width: 28%;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 1vw;
+}
+
+.header .nav-links2 li{
+    display: inline-block;
+    padding: 0 1vw;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links2 li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 1.3vw;
+    color: #9F9F9F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header .nav-links2 a{
+    font-size: 1.3vw;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header .nav-links li a:hover{
+    color: #fff;
+}
+
+.header .nav-links2 li a:hover{
+    color: #fff;
+}
+
+.header .btn{
+    font-weight: 700;
+    color: #9F9F9F;
+    cursor: pointer;
+
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.header .nav-links img{
+    height: 4.5vw;
+    width: auto;
+}
+
+.header .nav-links .nav-li2{
+    padding: 0.25vw;
+}
+
+/*Formulario*/
+.formulario{
+    margin: 7%;
+    margin-top: 2%;
+}
+
+
+/*Animaciones*/
+.animation .carta{
+    transform: rotateY(180deg);
+}
+
+.aclarar {
+    animation-name: aclarar;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aclarar {
+	0% {
+        visibility: visible;
+		opacity: 1;
+	}
+
+	100% {
+        visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.aclararP {
+    animation-name: aclararP;
+    animation-duration: 0.1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aclararP {
+	0% {
+        visibility: visible;
+		opacity: 1;
+	}
+
+	100% {
+        visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.oscurecer {
+    animation-name: oscurecer;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes oscurecer {
+	0% {
+        visibility: hidden;
+		opacity: 0;
+	}
+
+	100% {
+        visibility: visible;
+		opacity: 1;
+	}
+}
+
+.oscurecerP {
+    animation-name: oscurecerP;
+    animation-duration: 0.001s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes oscurecerP {
+	0% {
+        visibility: hidden;
+		opacity: 0;
+	}
+
+	100% {
+        visibility: visible;
+		opacity: 1;
+	}
+}
+
+.blur {
+    filter: blur(1px);
+    transition: 0.8s;
+}
+
+.grandeC{
+    transition: 0.8s;
+    width: 19.73%;
+    height: 68.96%;
+}
+
+.grandeI{
+    transition: 0.8s;
+    width: 296px;
+}
+
+.moverA{
+    transition: 0.8s;
+    transform: translate(137%, -50%);
+    z-index: 1000;
+}
+
+.moverB{
+    transition: 0.8s;
+    transform: translate(45%, -50%);
+    z-index: 1000;
+}
+
+.moverC{
+    transition: 0.8s;
+    transform: translate(-45%, -50%);
+    z-index: 1000;
+}
+
+.moverD{
+    transition: 0.8s;
+    transform: translate(-137%, -50%);
+    z-index: 1000;
+}
+
+.animation{
+    
+}
+
+.sacarA{
+    transition: 0.8s;
+    transform: translate(131%,100%);
+}
+
+.sacarB{
+    transition: 0.8s;
+    transform: translate(45%,100%);
+}
+
+.sacarC{
+    transition: 0.8s;
+    transform: translate(-45%,100%);
+}
+
+.sacarD{
+    transition: 0.8s;
+    transform: translate(-131%,100%);
+}
+
+.none{
+    display: none;
+}
+
+.parrafo{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.boton{
+    border-color: #D99729; 
+    background-color: #D99729; 
+    height: 45px; 
+    color: #ffffff; 
+    font-family: 'Montserrat', sans-serif; 
+    border-radius: 15px;
+}
+
+.boton:hover{
+    background-color: #eebb2e;
+    color: #2C2C2C;
+    text-decoration: none;
+    box-shadow: 4px 4px;
+    font-weight: bold;
+}
+
+.boton:disabled{
+    border-color: #d99829aa; 
+    background-color: #d99829aa; 
+    height: 45px; 
+    color: #969494; 
+    font-family: 'Montserrat', sans-serif; 
+    border-radius: 15px;
+    pointer-events: none;
+}

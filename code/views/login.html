@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/Lstyle.css" type="text/css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+<div class="container-fluid fondo">
+    <div class="row">
+        <h1 class="titulo titu">GoGamblerGo</h1>
+        
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <form class="form-container">
+                <h4 class="subtitulo sub">Log In</h4>
+                <div class="form-group">
+                    <label for="inputUser" class="label-info">Username</label>
+                    <input type="text" class="form-control" id="inputUser" placeholder="Username" required>
+                </div>    
+                <div class="form-group">
+                    <label for="inputPassword" class="label-info">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" autocomplete="new-password"  maxlength="15">
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <!-- <a href="../views/perfil.html"> -->
+                        <button class="btn btn-default btn-lg" onclick="seleccionarLogin()">Log In</button>
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div class="row justify-content-center text-center">
+                  <small>
+                    <a href="base.html" class="link text-center" type = "submit" style="color: #D99729;">Database Credentials </a>
+                  </small>
+              </div>
+            </form>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Connecting...</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="texto" style="text-align: center;">
+          <img src="../views/css/cargando.gif" alt="" style="height: 30px; width: 30px;" id="carga">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" disabled id="boton">Accept</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="../viewscripts/login.js"></script>
+</body>    
+</html>

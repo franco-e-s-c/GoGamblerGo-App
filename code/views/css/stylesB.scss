@@ -1,0 +1,33 @@
+/*Colores*/
+$primary: #464A71;
+$danger: #a83232;
+$theme-colors: (
+  "primary":    $primary,
+  "danger": $danger
+);
+
+/*Boton*/
+$btn-padding-y-lg: 0.6em;
+$btn-padding-x-lg: 2em;
+$btn-border-radius-lg: 1em;
+
+/*Input Form Style*/
+$input-bg: #fff;
+$input-border-color: #2D3264;
+$input-border-width: 0.15em;
+$input-border-radius: 0.2em;
+$input-focus-border-color: rgba(45,50,100,0.5);
+$input-focus-box-shadow: 0 0 0 0.15rem rgb(45 50 100/ 70%);
+$input-disabled-bg: #9a9a9a;
+
+/*Select Style*/
+$form-select-color: #2D3264;
+$form-select-border-color: #2D3264;
+$form-select-focus-box-shadow: 0 0 0 0.15rem rgb(45 50 100 /70%);
+$form-select-focus-border-color: rgba(45,50,100,0.5);
+
+$form-check-input-border: 0.15em solid rgb(45, 50, 100);
+$form-check-input-checked-bg-color: #2D3264;
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

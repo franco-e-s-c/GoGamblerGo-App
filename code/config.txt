@@ -1,0 +1,7 @@
+PG_BIN="C:\Program Files\PostgreSQL\13\bin\psql.exe"
+PG_RES="C:\Program Files\PostgreSQL\13\bin\pg_restore.exe"
+DB_NAME=ggg4
+USER=postgres
+PGPASSWORD=admin
+HOST=localhost
+PORT=5432

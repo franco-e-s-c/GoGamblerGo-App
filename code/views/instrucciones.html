@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <title>Go Gambler Go</title>
+</head>
+<body>
+<div class="container-fluid" style="background: url(src/fondo.jpg) no-repeat; width: 100%; height: 100vh; background-position: center;">
+    <div class="row justify-content-center" style="--bs-gutter-x: 0;">
+        <h1 class="titulo" style="font-weight: 700; margin-top: 5vh;">GoGamblerGo</h1>
+        <h2 class="subtitulo" style="color: #ffffff; font-weight: 500; margin-top: 2vh;">Instructions</h2>
+        <div class="col-11 fondoRes" style="margin-top: 4vh; margin-bottom: 8vh;">
+            <p class="parrafo" style="margin-top: 3vh;">
+                Pick one of the four decks (A, B, C, D) that are displayed by clicking over it.
+                <!-- Selecciona uno de los cuatro mazos que se presentan (A, B, C y D) haciendo 'click' sobre él. -->
+            </p>
+            <p class="parrafo">
+                Every deck that you pick has a posibility of winning or losing a specific amount of credits.
+                <!-- Por cada mazo seleccionado tendrás la posibilidad de ganar o perder una cantidad determinada de créditos. -->
+            </p>
+            <p class="parrafo">
+                You may choose whichever deck you want at any moment of the test, even if you choose the same several times. 
+                <!-- Puedes elegir el mazo que desees en cualquier momento de la prueba, incluso si eliges el mismo en varias ocasiones.     -->
+            </p>
+            <p class="parrafo">
+                The goal of this test is to get as many credits as possible in the minimum time.
+                <!-- El objetivo de la prueba es colectar la mayor cantidad de créditos posible en el menor tiempo posible. -->
+            </p>
+            <p class="parrafo">
+                You will be given some credits as initial fund, your test will start once you click the button START
+                <!-- Se te proporcionarán algunos créditos como banco inicial, iniciarás la prueba desde el botón COMENZAR.  -->
+            </p>
+            <p class="parrafo">
+                Good luck!
+                <!-- ¡Buena suerte! -->
+            </p>
+        </div>
+        <div id="liveAlertPlaceholder"></div>
+        
+            <button id='saveExp'class="boton" style="width: 15%;" onclick="guardarExpe()">START</button>
+        
+    </div>
+</div>
+<script src="../viewscripts/instrucciones.js"></script>
+</body>
+</html>

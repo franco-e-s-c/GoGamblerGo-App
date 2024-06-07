@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/Lstyle.css" type="text/css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+<div class="container-fluid fondo">
+    <div class="row">
+        <h1 class="titulo titu">GoGamblerGo</h1>
+        
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <form class="form container needs-validation" id="config" novalidate onsubmit="return false">
+                <h4 class="subtitulo sub">Database</h4>
+                <div class="form-group">
+                    <label for="inputUser" class="label-info">User</label>
+                    <input type="text" class="form-control mb-3" id="inputUser" placeholder="postgres" required>
+                </div>    
+                <div class="form-group">
+                    <label for="inputHost" class="label-info">Host</label>
+                    <input type="text" class="form-control mb-3" id="inputHost" placeholder="localhost" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputData" class="label-info">Database</label>
+                    <input type="text" class="form-control mb-3" id="inputData" placeholder="ggg" required>
+                </div>  
+                <div class="form-group">
+                    <label for="inputPass" class="label-info">Password</label>
+                    <input type="password" class="form-control mb-3" id="inputPass" placeholder="admin" required>
+                </div>  
+                <div class="form-group">
+                    <label for="inputPort" class="label-info">Port</label>
+                    <input type="text" class="form-control mb-3" id="inputPort" placeholder="5432" required>
+                </div>  
+                <div class="row">
+                    <div class="col text-center">
+                        <!-- <a href="../views/perfil.html"> -->
+                        <button class="btn btn-default btn-lg">Save</button>
+                        <!-- </a> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Waiting for response</h5>
+          <a href="login.html">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </a>
+        </div>
+        <div class="modal-body" id="texto">
+        </div>
+        <div class="modal-footer">
+            <a href="login.html">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" disabled id="boton">Accept</button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="../viewscripts/base.js"></script>
+</body>    
+</html>
